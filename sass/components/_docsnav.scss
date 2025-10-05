@@ -49,3 +49,21 @@
     }
   }
 }
+@include mixins.media-exl {
+  #doc_sctn-nav {
+    width: 76.5%;
+    margin-top: 0px;
+    overflow: hidden;
+    padding: 6px 40px;
+    padding-right: 60px;
+    @include mixins.trsn-ease;
+    ul {
+      gap: 20px;
+      li {
+        input {
+          width: 136px;
+        }
+      }
+    }
+  }
+}

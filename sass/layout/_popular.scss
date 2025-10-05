@@ -56,3 +56,34 @@
     }
   }
 }
+
+@include mixins.media-lg {
+  #popular {
+    .pplr_grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      div {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mixins.media-xl {
+  #popular {
+    .pplr_grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      div {
+        width: 352px;
+      }
+    }
+  }
+}
+
+
+@include mixins.media-exl {
+  #popular {
+     padding: 0 40px;
+  }
+}

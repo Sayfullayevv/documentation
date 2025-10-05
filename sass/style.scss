@@ -68,3 +68,19 @@
     display: none;
   }
 }
+@include mixins.media-exl {
+  #docs_sctn{
+    .doc_sctn{
+      width: 60%;
+      margin-left: 320px;
+    }
+  }
+}
+
+
+@include mixins.media-enormous{
+  #for_advertisement{
+    display: block;
+    z-index: -9;
+  }
+}

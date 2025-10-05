@@ -38,3 +38,22 @@
     }
   }
 }
+
+@include mixins.media-md {
+  #mauris_semper {
+    p {
+      font-size: 22px;
+    }
+    span {
+      width: 693px;
+      font-size: 16px;
+    }
+  }
+}
+
+
+@include mixins.media-exl {
+  #mauris_semper {
+     padding: 0 40px;
+  }
+}

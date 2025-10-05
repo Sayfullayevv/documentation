@@ -42,3 +42,23 @@
     }
   }
 }
+@include mixins.media-lg {
+  #footer {
+    padding: 0 20px;
+    p {
+      font-size: 17px;
+    }
+    ul {
+      flex-direction: row;
+      li {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@include mixins.media-exl {
+  #footer {
+     padding: 0 40px;
+  }
+}

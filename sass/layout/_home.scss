@@ -64,3 +64,47 @@
     }
   }
 } 
+@include mixins.media-md{
+   #home{
+    p.wlcm {
+      font-size: 36px;
+    }
+    p.txt {
+      width: 100%;
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+    button.gt_strt-btn {
+      width: 108px;
+      
+    }
+    button.spprt {
+      width: 84px;
+    }
+  }
+}
+@include mixins.media-lg {
+  #home{
+    p.wlcm {
+      font-size: 36px;
+    }
+    p.txt {
+      width: 718px;
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    button.gt_strt-btn {
+      width: 108px;
+      
+    }
+    button.spprt {
+      width: 84px;
+    }
+  }
+} 
+
+@include mixins.media-exl {
+  #home {
+     padding: 0 40px;
+  }
+}

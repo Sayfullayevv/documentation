@@ -74,3 +74,32 @@
     }
   }
 }
+@include mixins.media-exl {
+  #sdbar_sctn {
+    width: 320px;
+    background-color: variables.$bg-color;
+    z-index: 999;
+    gap: 20px;
+    height: 100vh;
+    @include mixins.trsn-ease;
+    .sdbar_logo{
+      padding-left: 40px;
+      #menu{
+        display: none;
+      }
+      
+    }
+    div {
+      line-height: 35px;
+      padding-left: 40px;
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

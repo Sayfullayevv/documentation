@@ -44,3 +44,10 @@
     }
   }
 }
+
+@include mixins.media-exl {
+  #help {
+     padding: 0 40px;
+  }
+}
+

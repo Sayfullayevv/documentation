@@ -71,3 +71,54 @@
     }
   }
 }
+@include mixins.media-lg {
+  #strt_here {
+    .strt_here-txt {
+      p {
+        font-size: 22px;
+      }
+    }
+    .strt_here-grids {
+      display: grid;
+      grid-template-columns: auto auto;
+      div {
+        width: 100%;
+        p {
+          font-size: 18px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@include mixins.media-xl {
+  #strt_here {
+    .strt_here-txt {
+      p {
+        font-size: 22px;
+      }
+    }
+    .strt_here-grids {
+      display: grid;
+      grid-template-columns: auto auto;
+      div {
+        width: 352px;
+        p {
+          font-size: 18px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@include mixins.media-exl {
+  #start {
+     padding: 0 40px;
+  }
+}
