@@ -12,6 +12,8 @@
 @use "./components/docsnav";
 @use './abstract/mixins';
 
+
+
 .docs_sctn {
   display: flex;
   justify-content: space-between;
@@ -40,6 +42,7 @@
     @include footer.footer;
   }
   @include sdbar.sdbar;
+
   .for_advertisement {
     flex: 1;
     width: 220px;

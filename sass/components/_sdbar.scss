@@ -2,6 +2,9 @@
 @use "../abstract/mixins";
 
 @mixin sdbar {
+  .active{
+    height: 100vh;
+  }
   .sdbar_sctn {
     flex: 1;
     height: 100vh;
@@ -16,6 +19,9 @@
       padding-left: 40px;
       display: flex;
       align-items: center;
+      i{
+        display: none;
+      }
     }
     div {
       line-height: 35px;
@@ -33,7 +39,38 @@
 }
 
 @include mixins.media-sm {
-  #sdbar_sctn{
-    display: none;
+  #sdbar_sctn {
+    width: 100%;
+    background-color: variables.$bg-color;
+    z-index: 999;
+    justify-content: start;
+    gap: 20px;
+    overflow: hidden;
+    height: 6.3vh;
+    @include mixins.trsn-ease;
+    .sdbar_logo{
+      display: flex;
+      justify-content: space-between;
+      padding-right: 20px;
+      padding-left: 20px;
+      #menu{
+        display: block;
+        z-index: 999;
+        cursor: pointer;
+      }
+      
+    }
+    div {
+      line-height: 35px;
+      padding-left: 40px;
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
   }
 }
