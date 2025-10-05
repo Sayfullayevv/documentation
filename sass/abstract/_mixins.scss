@@ -1,0 +1,33 @@
+@mixin media-sm {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin media-md{
+    @media (min-width: 576px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg{
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media-xl{
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-extra-xl{
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin trsn-ease{
+    transition: all 1s ease-in-out;
+}

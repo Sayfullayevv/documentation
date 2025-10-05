@@ -1,0 +1,65 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+@use "../abstract/functions";
+
+@mixin home {
+  .home {
+    padding: 0 40px;
+    margin-top: 80px;
+    span {
+      color: variables.$pr-text-color;
+      font-size: 14px;
+    }
+    p.wlcm {
+      font-size: 36px;
+      font-weight: 500;
+      margin: 15px 0;
+    }
+    p.txt {
+      width: 718px;
+      height: 90px;
+      line-height: 30px;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    button.gt_strt-btn {
+      width: 108px;
+      height: 48px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      color: variables.$bg-color;
+      background-color: #000;
+    }
+    button.spprt {
+      width: 84px;
+      height: 48px;
+      border: 1px solid variables.$scnd-border-color;
+      outline: none;
+      border-radius: 4px;
+      background-color: variables.$bg-color;
+    }
+  }
+}
+
+
+@include mixins.media-sm {
+  #home{
+    padding: 0 20px;
+    p.wlcm {
+      font-size: 20px;
+    }
+    p.txt {
+      width: 100%;
+      font-size: 15px;
+      margin-bottom: 100px;
+    }
+    button.gt_strt-btn {
+      width: 148px;
+      
+    }
+    button.spprt {
+      width: 102px;
+    }
+  }
+} 

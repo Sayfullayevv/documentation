@@ -1,0 +1,73 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+@use "../abstract/functions";
+
+@mixin start {
+  .strt_here {
+    padding: 0 40px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    .strt_here-txt {
+      p {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 25px;
+      }
+    }
+    .strt_here-grids {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 35px;
+      div {
+        width: 352px;
+        height: 258px;
+        border: 1px solid variables.$pr-text-color;
+        border-radius: 5px;
+        padding: 25px;
+        i {
+          padding: 5px;
+          border: 1px solid variables.$scnd-border-color;
+          border-radius: 4px;
+        }
+        p {
+          margin-top: 80px;
+          margin-bottom: 10px;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        span {
+          font-size: 14px;
+          line-height: 22px;
+          color: variables.$txt-color;
+        }
+      }
+    }
+  }
+}
+
+@include mixins.media-sm {
+  #strt_here {
+    padding: 0 20px;
+    margin-top: 70px;
+    .strt_here-txt {
+      p {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+    }
+    .strt_here-grids {
+      display: grid;
+      grid-template-columns: auto;
+      div {
+        width: 100%;
+        p {
+          font-size: 15px;
+        }
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

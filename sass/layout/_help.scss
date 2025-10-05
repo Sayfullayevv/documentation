@@ -1,0 +1,46 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+@mixin help {
+  .help {
+    padding: 0 40px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    p.help_txt {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    a {
+      text-decoration: none;
+      width: fit-content;
+      color: #4168cc;
+    }
+    .addtnl_txt-help {
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 30px;
+    }
+    span {
+      color: variables.$txt-color;
+    }
+  }
+}
+
+
+@include mixins.media-sm {
+  #help {
+     padding: 0 20px;
+    p.help_txt {
+      font-size: 17px;
+    }
+    .addtnl_txt-help {
+      font-size: 17px;
+    }
+    span {
+      color: variables.$txt-color;
+    }
+  }
+}

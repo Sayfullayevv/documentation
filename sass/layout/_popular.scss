@@ -1,0 +1,58 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+@use "../abstract/functions";
+
+@mixin popular {
+  .popular {
+    padding: 0 40px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    p.pplr_txt {
+      font-weight: 500;
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+    .pplr_grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+      border-bottom: 1px solid variables.$scnd-border-color;
+      padding-bottom: 60px;
+      div {
+        width: 352px;
+        height: 93px;
+        border: 1px solid variables.$scnd-border-color;
+        border-radius: 4px;
+        padding: 25px;
+
+        p {
+          font-size: 15px;
+          font-weight: 500;
+        }
+        span {
+          font-size: 13px;
+          color: variables.$txt-color;
+        }
+      }
+    }
+  }
+}
+@include mixins.media-sm {
+  #popular {
+    padding: 0 20px;
+    margin-top: 70px;
+    p.pplr_txt {
+      font-weight: 500;
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+    .pplr_grid {
+      display: grid;
+      grid-template-columns:  auto;
+      div {
+        width: 100%;
+      }
+    }
+  }
+}

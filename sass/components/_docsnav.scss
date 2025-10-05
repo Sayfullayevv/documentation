@@ -1,0 +1,36 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+@mixin docsnav {
+  .doc_sctn-nav {
+    width: 78.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 40px;
+    border-bottom: 1px solid variables.$scnd-border-color;
+    position: fixed;
+    background-color: #fff;
+    z-index: 999;
+    ul {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      li {
+        input {
+          width: 136px;
+          height: 36px;
+          padding: 15px;
+          border-radius: 4px;
+          border: 1px solid #dcdcdc;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+@include mixins.media-sm {
+  #doc_sctn-nav{
+    display: none;
+  }
+}

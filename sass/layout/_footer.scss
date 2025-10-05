@@ -1,0 +1,44 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+@mixin footer {
+  .ftr {
+    padding: 0 40px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    p {
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    ul {
+      display: flex;
+      gap: 20px;
+      li {
+        font-size: 14px;
+      }
+    }
+    span {
+      color: variables.$txt-color;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+  }
+}
+
+@include mixins.media-sm {
+  #footer {
+    padding: 0 20px;
+    p {
+      font-size: 17px;
+    }
+    ul {
+      flex-direction: column;
+      li {
+        font-size: 13px;
+      }
+    }
+  }
+}

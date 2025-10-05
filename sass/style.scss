@@ -1,0 +1,67 @@
+@use "./base/base";
+@use "./base/typography";
+@use "./layout/footer";
+@use "./layout/help";
+@use "./layout/home" as home;
+@use "./layout/overview";
+@use "./layout/popular";
+@use "./layout/semper";
+@use "./layout/start";
+@use "./abstract/variables";
+@use "./components/sdbar";
+@use "./components/docsnav";
+@use './abstract/mixins';
+
+.docs_sctn {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  .doc_sctn {
+    position: absolute;
+    flex: 3;
+    margin-left: 320px;
+    width: 60%;
+  // docsnav
+  @include docsnav.docsnav;
+    // Home
+    @include home.home;
+    //  Overview
+    @include overview.overview;
+    //  Semper
+    @include semper.semper;
+    //  start
+    @include start.start;
+    // Popular
+    @include popular.popular;
+    //  help
+    @include help.help;
+    //  footer
+    @include footer.footer;
+  }
+  @include sdbar.sdbar;
+  .for_advertisement {
+    flex: 1;
+    width: 220px;
+    height: 100vh;
+    border-left: 1px solid rgba(0, 0, 0, 0.267);
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    z-index: 99;
+  }
+}
+@include mixins.media-sm {
+  #docs_sctn{
+    flex-direction: column;
+    .doc_sctn{
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  #for_advertisement{
+    display: none;
+  }
+}

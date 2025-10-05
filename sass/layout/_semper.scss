@@ -1,0 +1,40 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+@use "../abstract/functions";
+
+@mixin semper {
+  .mauris_semper {
+    padding: 0 40px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 22px;
+      font-weight: 500;
+      border-bottom: 1px solid variables.$pr-text-color;
+      padding: 6px 0;
+    }
+    span {
+      width: 693px;
+      height: 48px;
+      margin-top: 18px;
+      line-height: 25px;
+    }
+  }
+}
+
+@include mixins.media-sm {
+  #mauris_semper {
+    padding: 0 20px;
+    margin-bottom: 130px;
+    p {
+      font-size: 18px;
+    }
+    span {
+      width: 100%;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+  }
+}
